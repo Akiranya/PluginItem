@@ -20,7 +20,7 @@ public class PluginItemModifier implements ItemModifier {
         String replaced = StringReplacer.replace(name, uuid, map.values());
         PluginItem<?> pluginItem = PluginItemRegistry.get().fromReferenceNullable(replaced);
         if (pluginItem == null)
-            return null;
+            return itemStack;
         ItemStack newItemStack = pluginItem.createItemStack();
         return newItemStack == null ? itemStack : newItemStack;
     }
