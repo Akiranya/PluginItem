@@ -10,15 +10,15 @@
     <version>2.0</version>
   </parent>
 
-  <artifactId>ExampleAddon</artifactId>
+  <artifactId>PluginItem</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ExampleAddon</name>
-  <description>An Example addon for BetterGUI</description>
+  <name>PluginItem</name>
+  <description>Enables to use Plugin Item from MewCore as Button</description>
 
   <properties>
-    <project.mainClass>me.hsgamer.bettergui.exampleaddon.ExampleAddon</project.mainClass>
+    <project.mainClass>me.hsgamer.bettergui.pluginitem.PluginItemHook</project.mainClass>
   </properties>
 
   <repositories>
@@ -26,5 +26,18 @@
       <id>codemc-public</id>
       <url>https://repo.codemc.io/repository/maven-public/</url>
     </repository>
+    <repository>
+      <id>papermc-repo</id>
+      <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
   </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>cc.mewcraft</groupId>
+      <artifactId>MewCore</artifactId>
+      <version>5.11</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>
